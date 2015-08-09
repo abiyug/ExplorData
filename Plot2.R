@@ -1,10 +1,10 @@
 ####################################################################################################################
-# Script Name: plot1.R                                                                                             #
+# Script Name: plot2.R                                                                                             #
 # Date: August 8, 2015                                                                                             #
 # Course: exdata-031                                                                                               #
 # Description: This script examines how a household energy usage over a 2-day period in February, 2007.            #  
 #              Plot1.R script downloads and extract the data, trim the data for just two days, then generates      #
-#              a histogram plot and saves it in a png format. Plot requires dplyr package                          #         
+#              Global activity power plot and saves it in a png format. Plot requires dplyr package                #         
 #                                                                                                                  #
 ####################################################################################################################
 
@@ -29,7 +29,7 @@ df2$date <- as.POSIXct(df2$date) #convert the new column from class char to POSI
 
 with(df2, plot(df2$date, df2$Global_active_power, type = "l",
               ylab = "Gloabl Active Power (kilowatts)", 
-              xlab = "",
+              xlab = ""
 ))
 dev.copy(png, file = "plot2.png", width = 480, height = 480)
 dev.off()
